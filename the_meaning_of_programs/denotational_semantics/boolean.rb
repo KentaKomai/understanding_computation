@@ -1,4 +1,4 @@
-class Number < Struct.new(:value)
+class Boolean < Struct.new(:value)
 
   def to_s
     values.to_s

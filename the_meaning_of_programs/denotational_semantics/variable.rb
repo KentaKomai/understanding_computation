@@ -1,7 +1,6 @@
-class Number < Struct.new(:value)
-
+class Variable < Struct.new(:name)
   def to_s
-    values.to_s
+    name.to_s
   end
 
   def inspect
@@ -9,14 +8,14 @@ class Number < Struct.new(:value)
   end
 
   def reducible?
-    false
+    true
   end
 
   def evaluate(environment)
-    self
+    environment[name]
   end
 
   def to_ruby
-    "-> e { #{value.inspect} }"
+    "-> e { e[#{name.inspect}] }"
   end
 end
