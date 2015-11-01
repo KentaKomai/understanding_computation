@@ -8,6 +8,6 @@ class NFADesign < Struct.new(:start_state, :accept_states, :rulebook)
   end
 
   def accepts?(string)
-    to_nfa.tap { |dfa| dfa.read_string(string) }.accepting?
+    to_nfa.tap { |nfa| nfa.read_string(string) }.accepting?
   end
 end
