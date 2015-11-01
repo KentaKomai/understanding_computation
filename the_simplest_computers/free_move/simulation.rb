@@ -64,6 +64,7 @@ p rulebook.follow_free_moves(Set[1])
 
 p '------------------------------'
 nfa_design = NFADesign.new(Set[1], [2,4], rulebook)
+p nfa_design.rulebook.rules
 p nfa_design.accepts?('aa')
 p nfa_design.accepts?('aaa')
 p nfa_design.accepts?('aaaaa')
