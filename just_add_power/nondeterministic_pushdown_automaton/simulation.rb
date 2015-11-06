@@ -56,12 +56,12 @@ p dpda_design.accepts?('baabmbaa')
 p '------------------------------'
 rulebook = NPDARulebook.new(
   [
-    PDARule.new(1, 'a', 1, '$', ['a', '$']),
-    PDARule.new(1, 'a', 1, 'a', ['a', 'a']),
-    PDARule.new(1, 'a', 1, 'b', ['a', 'b']),
-    PDARule.new(1, 'b', 1, '$', ['b', '$']),
-    PDARule.new(1, 'b', 1, 'a', ['b', 'a']),
-    PDARule.new(1, 'b', 1, 'b', ['b', 'b']),
+    PDARule.new(1, 'a', 1, '$', %w(a $) ),
+    PDARule.new(1, 'a', 1, 'a', %w(a a) ),
+    PDARule.new(1, 'a', 1, 'b', %w(a b) ),
+    PDARule.new(1, 'b', 1, '$', %w(b $) ),
+    PDARule.new(1, 'b', 1, 'a', %w(b a) ),
+    PDARule.new(1, 'b', 1, 'b', %w(b b) ),
     PDARule.new(1, nil, 2, '$', ['$']),
     PDARule.new(1, nil, 2, 'a', ['a']),
     PDARule.new(1, nil, 2, 'b', ['b']),
