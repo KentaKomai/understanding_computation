@@ -84,3 +84,4 @@ dtm.run
 p dtm.stuck?
 p dtm.current_configuration
 p dtm.accepting?
+
